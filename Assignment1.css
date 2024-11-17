@@ -1,0 +1,270 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif; /* Sets the font for the entire page */
+    margin: 0; 
+    padding: 0; 
+    line-height: 1.6; /* Increases line spacing for readability */
+    background-color: #f4f4f4; /* Sets a light gray background color */
+    display: grid; /* Sets the body as a grid container */
+    grid-template-areas: /* Defines grid areas for layout */
+        'header'
+        'main'
+        'footer';
+    grid-template-rows: auto 1fr auto; /* Sets row heights, with main taking up most space */
+    align-items: center; /* Centers grid items vertically */
+    height: 100vh; /* Sets the body height to the viewport height */
+    width: 100vw; /* Sets the body width to the viewport width */
+}
+
+header {
+    grid-area: header; /* Assigns header to the header grid area */
+}
+
+header, footer {
+    background-color: #333; 
+    color: white; /* Sets text color to white */
+    padding: 10px 0; 
+    text-align: center; /* Centers text horizontally */
+}
+
+footer {
+    grid-area: footer; /* Assigns footer to the footer grid area */
+}
+
+footer p {
+    font-size: small; /* Sets the font size of paragraphs in footer */
+}
+
+h1 {
+    font-size: 2em; /* Sets a large font size for headings */
+    padding: 20px; /* Adds padding around the heading */
+}
+
+main {
+    padding: 20px; /* Adds padding inside the main content */
+    text-align: left; /* Aligns text to the left */
+    grid-area: main; /* Assigns main to the main grid area */
+}
+
+main.home {
+    text-align: center; /* Centers text for elements with the class 'home' inside main */
+}
+
+#portrait {
+    border-radius: 50%; /* Makes an image with this ID round */
+}
+
+img {
+    margin: 0 auto; /* Centers the image horizontally */
+    border-radius: 10%; /* Rounds image corners */
+    object-fit: cover; /* Ensures the image scales and fills its container */
+    height: clamp(100px, 12vw, 350px); /* Sets a responsive height */
+    width: clamp(100px, 12vw, 350px); /* Sets a responsive width */
+}
+
+/* Form container styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px; 
+    margin: 20px auto;
+    background: white; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Arranges elements vertically */
+}
+
+/* Labels and inputs styling */
+label {
+    font-weight: bold; /* Makes labels bold */
+    margin-bottom: 5px; /* Adds spacing below labels */
+    color: #333; /* Sets label text color to dark gray */
+}
+
+input, textarea, button {
+    padding: 10px; /* Adds padding inside inputs, textarea, and buttons */
+    border: 1px solid #ccc; /* Adds a light gray border */
+    border-radius: 5px; /* Rounds corners */
+    width: 90%; /* Sets width to 90% of the parent */
+    font-size: 1em; /* Sets font size */
+}
+
+textarea {
+    height: 100px; /* Sets a fixed height */
+    resize: vertical; /* Allows vertical resizing */
+}
+
+/* Button styling */
+button {
+    background-color: #333; /* Sets a dark background color */
+    color: white; /* Sets text color to white */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-size: 1.1em; /* Sets font size */
+    margin-top: 10px; /* Adds top margin */
+    transition: background-color 0.3s; /* Adds transition effect for background color */
+    width: 20%; 
+}
+
+button:hover {
+    background-color: #555; 
+}
+
+/* Resume Layout */
+.resume-container {
+    display: grid;
+    grid-template-areas: 
+        'summary summary summary summary'
+        'left-column right-column right-column right-column';
+    gap: 20px; /* Adds space between grid items */
+    max-width: 1200px; /* Sets maximum width */
+    margin: 50px auto; /* Centers the container */
+    background-color: #fff; /* Sets a white background */
+    padding: 30px; /* Adds padding inside */
+    border-radius: 10px; /* Rounds container corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds shadow */
+}
+
+.summary {
+    grid-area: summary;
+}
+
+.left-column {
+    grid-area: left-column; /* Assigns left column area in the grid */
+    border-right: 1px solid #e0e0e0; /* Adds a border on the right */
+    padding-right: 20px; /* Adds padding on the right */
+}
+
+.right-column {
+    grid-area: right-column; /* Assigns right column area in the grid */
+    padding-left: 20px; /* Adds padding on the left */
+}
+
+/* Contact Information Section */
+.contact-info ul {
+    list-style: none; /* Removes default list styling */
+    padding-left: 0; /* Removes left padding */
+}
+
+.contact-info li {
+    margin-bottom: 10px; /* Adds spacing between items */
+    font-size: 1.1em; /* Sets font size */
+}
+
+.contact-info i {
+    margin-right: 10px; /* Adds spacing after icons */
+}
+
+/* Skills Section */
+.skills ul {
+    list-style: none; /* Removes bullet points */
+    padding-left: 0px; /* Removes left padding */
+}
+
+/* Education Section */
+.education ul {
+    list-style-type: none; /* Removes bullet points */
+    padding-left: 0; /* Removes left padding */
+}
+
+/* Work Experience Section */
+.work-experience ul {
+    list-style-type: none; /* Removes bullet points */
+    padding-left: 0; /* Removes left padding */
+}
+
+/* Typography */
+h2, legend {
+    font-size: 1.5em; /* Sets font size */
+    font-weight: bold; /* Makes text bold */
+    color: #2c3e50; /* Sets text color */
+    margin-bottom: 10px; /* Adds spacing below */
+    border-bottom: 2px solid #2980b9; /* Adds a blue underline */
+    padding-bottom: 5px; /* Adds spacing below text */
+}
+
+legend {
+    border-bottom: none; /* Removes underline from legends */
+}
+
+p, li {
+    font-size: 1.1em; /* Sets font size */
+    line-height: 1.6; /* Increases line spacing */
+    margin-bottom: 10px; /* Adds spacing below elements */
+}
+
+a {
+    color: #2980b9; /* Sets link color */
+    text-decoration: none; /* Removes underline from links */
+}
+
+a:hover {
+    color: #3498db; /* Changes color on hover */
+    text-decoration: underline; /* Underlines text on hover */
+}
+
+/* Navigation styles */
+nav a {
+    color: white; /* Sets link color in navigation */
+    margin: 0 10px; /* Adds space between links */
+    text-decoration: none; /* Removes underline */
+    font-size: 1.5em; /* Sets font size */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underlines on hover */
+    font-weight: bold; /* Makes text bold on hover */
+}
+
+.project {
+    display: grid; /* Uses grid layout for project sections */
+    gap: 20px; /* Adds space between grid items */
+    align-items: start; /* Aligns items at the start */
+}
+
+.project.left {
+    grid-template-areas: /* Defines layout for projects aligned left */
+        'title title'
+        'image text';
+}
+
+.project.right {
+    grid-template-areas: /* Defines layout for projects aligned right */
+        'title title'
+        'text image';
+}
+
+.project h2 {
+    grid-area: title; /* Assigns title area */
+}
+
+.project img {
+    grid-area: image; 
+}
+
+.project p {
+    grid-area: text; /* Assigns text area */
+}
+
+@media (max-width: 1000px) {
+    .resume-container {
+        grid-template-areas: /* Switches to single-column layout */
+            'summary'
+            'left-column'
+            'right-column';
+    }
+
+    .left-column, .right-column {
+        padding: 10px; /* Reduces padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
